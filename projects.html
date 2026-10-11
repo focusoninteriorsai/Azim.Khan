@@ -1,117 +1,748 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101112">
-  <meta name="description" content="Explore selected FocusOn Interiors projects delivered during Azim Khan's years in operations and leadership, from a 125,000 sq ft L&T Finance workplace to industrial and technology spaces.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Projects — Azim Khan · FocusOn Interiors Portfolio</title>
+  <meta name="description" content="Selected FocusOn Interiors projects delivered during Azim Khan's tenure: L&T Finance Mahape and Bengaluru, Luminous Haridwar, Emversity Kochi, Ericsson Ahmedabad and more.">
+  <meta name="author" content="Azim Khan">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="dark">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Selected Work — Azim Khan">
-  <meta property="og:description" content="A selection of FocusOn Interiors work across financial services, industrial and technology sectors.">
-  <meta property="og:image" content="https://roushan62.github.io/Azim-Khan/assets/img/lt-mahape-1.webp">
-  <title>Selected Work — Azim Khan</title>
-  <link rel="preconnect" href="https://roushan62.github.io" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <meta property="og:site_name" content="Azim Khan">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="Projects — Azim Khan · FocusOn Interiors Portfolio">
+  <meta property="og:description" content="Selected FocusOn Interiors projects delivered during Azim Khan's tenure: L&T Finance Mahape and Bengaluru, Luminous Haridwar, Emversity Kochi, Ericsson Ahmedabad and more.">
+  <meta property="og:image" content="assets/images/azim-khan-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Azim Khan, Chief Executive Officer, FocusOn Interiors">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects — Azim Khan · FocusOn Interiors Portfolio">
+  <meta name="twitter:description" content="Selected FocusOn Interiors projects delivered during Azim Khan's tenure: L&T Finance Mahape and Bengaluru, Luminous Haridwar, Emversity Kochi, Ericsson Ahmedabad and more.">
+  <meta name="twitter:image" content="assets/images/azim-khan-og.jpg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111111'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23333333' stroke-width='2'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-size='25' font-weight='700' fill='%23F5F5F5'%3EA%3Ctspan fill='%23FF453A'%3EK%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+/* ====== Shared design system (replicated in every page by design) ====== */
+/* ==========================================================
+   Design tokens — keep identical across every page
+   ========================================================== */
+:root{
+  --bg:#111111; --bg-2:#191919; --card:#202020; --card-2:#262626;
+  --red:#E53935; --red-hi:#FF453A; --red-soft:rgba(229,57,53,.12);
+  --text:#F5F5F5; --muted:#A5A5A5; --border:#333333; --border-soft:rgba(255,255,255,.07);
+  --radius-sm:12px; --radius:20px; --radius-lg:28px;
+  --maxw:1240px; --gutter:clamp(20px,5vw,48px); --header-h:76px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI Variable","Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 20px);background:var(--bg)}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:var(--font);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;text-rendering:optimizeLegibility}
+body.menu-open{overflow:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+p{margin:0}
+figure,blockquote{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+::selection{background:var(--red);color:#fff}
+:focus-visible{outline:2px solid var(--red-hi);outline-offset:3px;border-radius:8px}
+.skip-link{position:fixed;left:16px;top:-80px;z-index:400;background:var(--red);color:#fff;padding:12px 18px;border-radius:12px;font-weight:600;transition:top .25s var(--ease)}
+.skip-link:focus{top:16px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---------- layout ---------- */
+.container{width:min(100% - 2*var(--gutter),var(--maxw));margin-inline:auto}
+.section{position:relative;padding-block:clamp(80px,10vw,140px)}
+.section--tight{padding-block:clamp(56px,7vw,96px)}
+.section--alt{background:var(--bg-2)}
+.section--line{border-top:1px solid var(--border-soft)}
+.grid{display:grid;gap:clamp(16px,2vw,24px)}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:center}
+.stack>*+*{margin-top:18px}
+
+/* ---------- typography ---------- */
+h1,h2,h3,h4{margin:0;font-weight:650;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--red)}
+.display{font-size:clamp(48px,8vw,112px);font-weight:700;letter-spacing:-.05em;line-height:.95}
+.h1{font-size:clamp(42px,6.4vw,88px);font-weight:700;letter-spacing:-.045em;line-height:1}
+.h2{font-size:clamp(34px,4.6vw,60px);letter-spacing:-.04em;line-height:1.04}
+.h3{font-size:clamp(21px,1.9vw,25px);letter-spacing:-.02em;line-height:1.2}
+.lead{font-size:clamp(18px,1.55vw,21px);line-height:1.6;color:var(--muted);max-width:62ch}
+.body-copy{color:var(--muted);max-width:66ch}
+.body-copy strong,.lead strong{color:var(--text);font-weight:600}
+.accent{color:var(--red-hi)}
+.dim{color:#6f6f6f}
+.grad{background:linear-gradient(180deg,#ffffff 0%,#b9b9b9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad-red{background:linear-gradient(100deg,#ff6b5f 0%,#e53935 60%,#b72b28 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:clamp(40px,5vw,64px)}
+.section-head>div{max-width:760px}
+.section-head .h2{margin-top:18px}
+.section-head .lead{margin-top:18px}
+.source{font-size:13px;color:#7d7d7d;line-height:1.5}
+.source a{color:var(--muted);border-bottom:1px solid #444;transition:color .2s,border-color .2s}
+.source a:hover{color:var(--text);border-color:var(--red)}
+
+/* ---------- buttons & links ---------- */
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:1px solid transparent;font-size:16px;font-weight:600;letter-spacing:-.01em;cursor:pointer;white-space:nowrap;transition:transform .4s var(--ease),background-color .3s,border-color .3s,box-shadow .4s var(--ease),color .3s}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.btn--primary{background:var(--red);color:#fff;box-shadow:0 12px 32px -14px rgba(229,57,53,.75)}
+.btn--primary:hover{background:var(--red-hi);transform:translateY(-2px);box-shadow:0 20px 44px -16px rgba(255,69,58,.75)}
+.btn--ghost{background:rgba(255,255,255,.03);border-color:var(--border);color:var(--text)}
+.btn--ghost:hover{background:rgba(255,255,255,.07);border-color:#555;transform:translateY(-2px)}
+.btn--sm{min-height:42px;padding:0 18px;font-size:14.5px}
+.link-arrow{position:relative;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15.5px;color:var(--text);padding-bottom:5px}
+.link-arrow svg{width:17px;height:17px;transition:transform .4s var(--ease)}
+.link-arrow::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--red);transform:scaleX(.22);transform-origin:left;transition:transform .5s var(--ease)}
+.link-arrow:hover::after,.link-arrow:focus-visible::after{transform:scaleX(1)}
+.link-arrow:hover svg{transform:translateX(3px)}
+.text-link{color:var(--text);background:linear-gradient(var(--red),var(--red)) 0 100%/0 1.5px no-repeat;transition:background-size .45s var(--ease)}
+.text-link:hover{background-size:100% 1.5px}
+
+/* ---------- chips & icons ---------- */
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03);font-size:13.5px;color:#d6d6d6;line-height:1.3}
+.chip--red{border-color:rgba(229,57,53,.4);background:var(--red-soft);color:#ffb3ad}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.icon{width:50px;height:50px;flex:none;border-radius:15px;display:grid;place-items:center;background:var(--red-soft);border:1px solid rgba(229,57,53,.28);color:var(--red-hi);transition:transform .5s var(--ease),background-color .3s}
+.icon svg{width:23px;height:23px}
+
+/* ---------- cards ---------- */
+.card{position:relative;overflow:hidden;background:linear-gradient(180deg,#232323 0%,#1d1d1d 100%);border:1px solid var(--border);border-radius:var(--radius);padding:clamp(24px,2.6vw,34px);transition:transform .55s var(--ease),border-color .4s,box-shadow .55s var(--ease)}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,69,58,.75),transparent);opacity:0;transition:opacity .45s}
+.card:hover{transform:translateY(-4px);border-color:#474747;box-shadow:0 30px 60px -34px rgba(0,0,0,.9)}
+.card:hover::before{opacity:1}
+.card:hover .icon{transform:translateY(-2px) scale(1.04);background:rgba(229,57,53,.18)}
+.card h3{margin-top:22px}
+.card p{margin-top:12px;color:var(--muted);font-size:16px;line-height:1.6}
+.card .num{font-size:13px;font-weight:600;letter-spacing:.14em;color:#7a7a7a}
+.card--flat:hover{transform:none}
+.quote-card{display:flex;flex-direction:column;gap:22px}
+.quote-card blockquote{margin:0;font-size:clamp(18px,1.5vw,20px);line-height:1.55;color:#e9e9e9;letter-spacing:-.01em}
+.quote-card .q-icon{width:34px;height:34px;color:var(--red-hi)}
+.quote-card figcaption{margin-top:auto;padding-top:18px;border-top:1px solid var(--border-soft);display:flex;flex-direction:column;gap:3px;font-size:14.5px}
+.quote-card figcaption strong{font-weight:600;color:var(--text)}
+.quote-card figcaption span{color:var(--muted)}
+.quote-card figure{margin:0}
+
+/* ---------- media frames ---------- */
+.frame{position:relative;overflow:hidden;border-radius:var(--radius-lg);border:1px solid var(--border);background:#1a1a1a}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.frame:hover img{transform:scale(1.04)}
+.frame figcaption,.frame .caption{position:absolute;left:16px;bottom:16px;right:16px;display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#e6e6e6}
+.frame .caption span{background:rgba(17,17,17,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.08);padding:7px 12px;border-radius:999px}
+.img-missing{display:grid;place-items:center;background:repeating-linear-gradient(135deg,#1c1c1c 0 12px,#202020 12px 24px)}
+.img-missing img{opacity:0}
+.img-missing::after{content:attr(data-fallback);position:absolute;inset:auto 0 50% 0;transform:translateY(50%);text-align:center;font-size:13px;color:#777;padding:0 16px}
+
+/* ---------- project card (shared) ---------- */
+.project-card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .6s var(--ease),border-color .4s,box-shadow .6s var(--ease)}
+.project-card:hover{transform:translateY(-5px);border-color:#4a4a4a;box-shadow:0 36px 70px -40px rgba(0,0,0,.95)}
+.project-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#1a1a1a}
+.project-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease)}
+.project-card:hover .project-media img{transform:scale(1.07)}
+.project-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%);pointer-events:none}
+.project-tag{position:absolute;z-index:2;left:16px;top:16px;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(17,17,17,.72);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.project-area{position:absolute;z-index:2;right:16px;bottom:14px;font-size:13px;font-weight:600;color:#fff}
+.project-body{display:flex;flex-direction:column;gap:10px;flex:1;padding:24px 26px 26px}
+.project-body h3{font-size:clamp(20px,1.7vw,23px)}
+.project-meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px;color:var(--muted)}
+.project-meta span{display:inline-flex;align-items:center;gap:6px}
+.project-meta svg{width:15px;height:15px;color:#7d7d7d}
+.project-body p{color:var(--muted);font-size:15.5px;line-height:1.6}
+.project-body .link-arrow{margin-top:auto;padding-top:10px;align-self:flex-start}
+.project-link::before{content:"";position:absolute;inset:0;z-index:3}
+
+/* ---------- header ---------- */
+.site-header{position:fixed;inset:0 0 auto 0;z-index:100;height:var(--header-h);border-bottom:1px solid transparent;transition:background-color .45s var(--ease),border-color .45s,backdrop-filter .45s}
+.site-header.is-scrolled,.menu-open .site-header{background:rgba(17,17,17,.8);-webkit-backdrop-filter:saturate(170%) blur(18px);backdrop-filter:saturate(170%) blur(18px);border-bottom-color:var(--border-soft)}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:inline-flex;align-items:center;gap:12px;flex:none;border-radius:12px}
+.brand-mark{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#2b2b2b,#161616);border:1px solid var(--border);font-weight:700;font-size:14.5px;letter-spacing:.02em;transition:border-color .3s,transform .5s var(--ease)}
+.brand-mark span{color:var(--red-hi)}
+.brand:hover .brand-mark{border-color:var(--red);transform:rotate(-4deg)}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-text strong{font-size:16px;font-weight:650;letter-spacing:-.015em}
+.brand-text small{font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{position:relative;padding:10px 12px;border-radius:10px;font-size:14.5px;font-weight:500;color:var(--muted);transition:color .25s}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:5px;height:1.5px;border-radius:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--text)}
+.nav a:hover::after,.nav a:focus-visible::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+.header-actions{display:flex;align-items:center;gap:10px}
+.menu-toggle{display:none;position:relative;width:46px;height:46px;border-radius:13px;border:1px solid var(--border);background:rgba(255,255,255,.04);cursor:pointer;transition:border-color .3s,background-color .3s}
+.menu-toggle:hover{border-color:#555}
+.menu-toggle span{position:absolute;left:13px;right:13px;height:1.7px;border-radius:2px;background:var(--text);transition:transform .5s var(--ease),top .5s var(--ease),width .5s var(--ease)}
+.menu-toggle span:nth-child(1){top:18px}
+.menu-toggle span:nth-child(2){top:26px;right:19px}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){top:22px;transform:rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){top:22px;right:13px;transform:rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:99;display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:calc(var(--header-h) + 24px) var(--gutter) max(32px,env(safe-area-inset-bottom));background:rgba(13,13,13,.97);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility 0s linear .45s}
+.mobile-menu.is-open{opacity:1;visibility:visible;transition:opacity .45s var(--ease),visibility 0s}
+.mobile-menu nav a{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 4px;border-bottom:1px solid var(--border);font-size:clamp(28px,7.4vw,42px);font-weight:650;letter-spacing:-.035em;line-height:1.15;opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .6s var(--ease),color .25s;transition-delay:calc(var(--i,0)*45ms)}
+.mobile-menu nav a small{font-size:13px;font-weight:500;letter-spacing:.08em;color:#6d6d6d}
+.mobile-menu nav a:hover,.mobile-menu nav a[aria-current="page"]{color:var(--red-hi)}
+.mobile-menu.is-open nav a{opacity:1;transform:none}
+.mobile-menu-foot{display:flex;flex-direction:column;gap:14px;font-size:15px;color:var(--muted)}
+.mobile-menu-foot a{color:var(--text)}
+
+/* ---------- page hero (inner pages) ---------- */
+.page-hero{position:relative;overflow:hidden;padding-top:calc(var(--header-h) + clamp(64px,10vw,132px));padding-bottom:clamp(56px,7vw,100px)}
+.page-hero::before{content:"";position:absolute;width:820px;height:820px;right:-260px;top:-360px;border-radius:50%;background:radial-gradient(closest-side,rgba(229,57,53,.16),rgba(229,57,53,0));pointer-events:none}
+.page-hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:72px 72px;-webkit-mask-image:radial-gradient(ellipse at 70% 0%,#000 0%,transparent 65%);mask-image:radial-gradient(ellipse at 70% 0%,#000 0%,transparent 65%);pointer-events:none}
+.page-hero .container{position:relative;z-index:1}
+.page-hero .h1{margin-top:26px;max-width:16ch}
+.page-hero .lead{margin-top:28px}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13.5px;color:#7d7d7d;margin-bottom:22px}
+.crumbs a{color:var(--muted);transition:color .2s}
+.crumbs a:hover{color:var(--text)}
+.crumbs svg{width:14px;height:14px}
+
+/* ---------- reveal system ---------- */
+.reveal-line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.reveal-line>span{display:block}
+.js .reveal-line>span{transform:translateY(108%);transition:transform 1.15s var(--ease);transition-delay:var(--d,0s);animation:failsafe-show 0s linear 6s forwards}
+.js .hero-fade{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s);animation:failsafe-show 0s linear 6s forwards}
+.is-ready .reveal-line>span,.is-ready .hero-fade{transform:none;opacity:1}
+.js [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .95s var(--ease),transform .95s var(--ease);transition-delay:var(--d,0s)}
+.js [data-reveal="fade"]{transform:none}
+.js [data-reveal="scale"]{transform:scale(.96)}
+.js [data-reveal].is-in{opacity:1;transform:none}
+@keyframes failsafe-show{to{opacity:1;transform:none}}
+
+/* ---------- CTA band ---------- */
+.cta-card{position:relative;overflow:hidden;border-radius:var(--radius-lg);border:1px solid var(--border);background:radial-gradient(120% 140% at 100% 0%,rgba(229,57,53,.22) 0%,rgba(229,57,53,0) 45%),linear-gradient(180deg,#1f1f1f,#171717);padding:clamp(36px,6vw,80px)}
+.cta-card::after{content:"AK";position:absolute;right:-.06em;bottom:-.28em;font-size:clamp(160px,24vw,340px);font-weight:800;letter-spacing:-.06em;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);pointer-events:none}
+.cta-card>*{position:relative;z-index:1}
+.cta-card .h2{margin-top:20px;max-width:21ch;hyphens:manual}
+.cta-card .lead{margin-top:20px}
+.cta-card .btn-row{margin-top:36px}
+
+/* ---------- footer ---------- */
+.site-footer{position:relative;border-top:1px solid var(--border);background:#0c0c0c;padding:clamp(64px,8vw,96px) 0 32px;font-size:15px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:clamp(32px,5vw,72px)}
+.footer-brand p{margin-top:20px;color:var(--muted);max-width:40ch;line-height:1.65}
+.footer-social{display:flex;gap:10px;margin-top:24px}
+.footer-social a{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;border:1px solid var(--border);color:var(--muted);transition:color .25s,border-color .25s,transform .4s var(--ease)}
+.footer-social a:hover{color:var(--text);border-color:var(--red);transform:translateY(-2px)}
+.footer-social svg{width:19px;height:19px}
+.footer-col h2{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#7d7d7d;margin-bottom:18px}
+.footer-col li+li{margin-top:10px}
+.footer-col a{color:#cfcfcf;transition:color .2s}
+.footer-col a:hover,.footer-col a[aria-current="page"]{color:var(--text)}
+.footer-col a[aria-current="page"]{color:var(--red-hi)}
+.footer-col .small{display:block;font-size:13px;color:#777;margin-top:2px}
+.footer-bottom{margin-top:clamp(48px,6vw,72px);padding-top:24px;border-top:1px solid var(--border-soft);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;font-size:13.5px;color:#7d7d7d}
+.to-top{display:inline-flex;align-items:center;gap:8px;color:var(--muted);transition:color .2s}
+.to-top:hover{color:var(--text)}
+.to-top svg{width:15px;height:15px;transform:rotate(-90deg)}
+
+/* ---------- toast ---------- */
+.toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom));z-index:250;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#262626;border:1px solid #3d3d3d;color:var(--text);padding:12px 18px;border-radius:999px;font-size:14.5px;display:flex;align-items:center;gap:10px;box-shadow:0 20px 40px -20px #000;transition:opacity .35s var(--ease),transform .45s var(--ease)}
+.toast svg{width:17px;height:17px;color:#57d18a}
+.toast.is-show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- responsive (shared) ---------- */
+@media (max-width:1120px){
+  .nav,.header-cta{display:none}
+  .menu-toggle{display:block}
+}
+@media (max-width:1024px){
+  .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .footer-brand{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .split{grid-template-columns:1fr}
+  .section-head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .btn{width:100%}
+  .btn-row{flex-direction:column;align-items:stretch}
+  .footer-top{grid-template-columns:1fr}
+  .brand-text small{display:none}
+  :root{--header-h:68px}
+}
+@media (max-width:360px){
+  .brand-text strong{font-size:15px}
+  .display{font-size:44px}
+}
+@media (hover:none){
+  .card:hover,.project-card:hover{transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+  .js [data-reveal],.js .reveal-line>span,.js .hero-fade{opacity:1;transform:none}
+}
+@media print{
+  .site-header,.mobile-menu,.cta-section,.toast{display:none!important}
+  body{background:#fff;color:#000}
+}
+
+/* ====== Page-specific styles ====== */
+.note{display:flex;gap:16px;align-items:flex-start;padding:20px 22px;border-radius:18px;border:1px solid var(--border);background:rgba(255,255,255,.02);max-width:860px;margin-top:36px}
+.note .icon{width:40px;height:40px;border-radius:12px}
+.note p{color:var(--muted);font-size:15px;line-height:1.6}
+.note strong{color:var(--text)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filter-btn{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--muted);font-size:14.5px;font-weight:500;cursor:pointer;transition:color .25s,border-color .25s,background-color .25s}
+.filter-btn:hover{color:var(--text);border-color:#555}
+.filter-btn[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:#111}
+.filter-count{margin-left:auto;font-size:14px;color:#7d7d7d}
+.works{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(16px,2vw,24px);margin-top:32px}
+.works .project-card{grid-column:span 2}
+.works .project-card--big{grid-column:span 4}
+.works .project-card--big .project-media{aspect-ratio:16/10}
+.works .project-card--wide{grid-column:span 3}
+.works .project-card--wide .project-media{aspect-ratio:16/10}
+.project-card.is-hidden,.more-card.is-hidden{display:none}
+.project-card.is-entering,.more-card.is-entering{animation:card-in .6s var(--ease) both}
+@keyframes card-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.more-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+.more-card{display:flex;flex-direction:column;gap:14px;padding:26px;border-radius:var(--radius);border:1px solid var(--border);background:var(--card);transition:border-color .3s,transform .5s var(--ease)}
+.more-card:hover{border-color:#4a4a4a;transform:translateY(-3px)}
+.more-card .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.more-card .mono{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-weight:700;font-size:18px;background:#2a2a2a;border:1px solid var(--border);color:var(--text)}
+.more-card .area{font-size:20px;font-weight:650;letter-spacing:-.02em}
+.more-card h3{font-size:20px}
+.more-card .project-meta{margin-top:-6px}
+.more-card .source{margin-top:auto}
+.empty{display:none;padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--border);border-radius:var(--radius);margin-top:24px}
+.empty.is-show{display:block}
+@media (max-width:1024px){.works .project-card,.works .project-card--wide{grid-column:span 3}.works .project-card--big{grid-column:1/-1}.more-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.works .project-card,.works .project-card--big,.works .project-card--wide{grid-column:1/-1}.works .project-card--big .project-media,.works .project-card--wide .project-media{aspect-ratio:4/3}.more-grid{grid-template-columns:1fr}.filter-count{width:100%;margin-left:0}}
+
+  </style>
 </head>
-<body class="inner-page">
+<body>
+
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="site-shell" id="top">
-    <header class="site-header" id="site-header">
-      <div class="header-inner page-width">
-        <a class="brand" href="index.html#home" aria-label="Azim Khan, home"><span class="brand-monogram">A<span>K</span></span><span class="brand-copy"><strong>AZIM KHAN</strong><small>LEADERSHIP · DELIVERY</small></span></a>
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="about.html">About</a><a href="journey.html">Journey</a><a href="projects.html" aria-current="page">Selected work</a><a href="contact.html">Contact</a>
-        </nav>
-        <a class="header-contact" href="contact.html">Let’s talk <span aria-hidden="true">↗</span></a>
-        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
-      </div>
-      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
-        <a href="about.html">About <span>01</span></a><a href="journey.html">Journey <span>02</span></a><a href="projects.html" aria-current="page">Selected work <span>03</span></a><a href="contact.html">Contact <span>04</span></a>
-        <p>CEO, FocusOn Interiors · New Delhi, India</p>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Azim Khan — home">
+        <span class="brand-mark" aria-hidden="true">A<span>K</span></span>
+        <span class="brand-text"><strong>Azim Khan</strong><small>CEO · FocusOn Interiors</small></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="expertise.html">Expertise</a>
+          <a href="highlights.html">Highlights</a>
+          <a href="contact.html">Contact</a>
       </nav>
-    </header>
-
-    <main id="main">
-      <section class="inner-hero projects-hero" aria-labelledby="page-title">
-        <div class="inner-hero-grid page-width">
-          <div class="inner-hero-copy reveal">
-            <p class="eyebrow"><span class="eyebrow-mark"></span> SELECTED WORK <i></i> FOCUSON INTERIORS</p>
-            <h1 id="page-title">Spaces with purpose.<br><em>Built to perform.</em></h1>
-            <p>A selection of FocusOn Interiors projects delivered during Azim’s years in operations and leadership—each shaped by a wider team, a clear brief and the work on site.</p>
-            <div class="page-breadcrumb"><a href="index.html">HOME</a><span>/</span><span>SELECTED WORK</span></div>
-          </div>
-          <div class="inner-hero-visual inner-hero-work" data-image-frame>
-            <div class="inner-hero-fallback" aria-hidden="true"><span>FO</span></div>
-            <img src="https://roushan62.github.io/Azim-Khan/assets/img/lt-mahape-lounge.webp" alt="Collaboration lounge at the L&amp;T Finance workplace in Mahape" fetchpriority="high">
-            <span class="inner-hero-visual-label">L&amp;T FINANCE · MAHAPE · 125,000 SQ. FT.</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="work-stats-band" aria-label="Selected project highlights">
-        <div class="page-width work-stats-grid">
-          <div><strong>125,000</strong><span>SQ. FT. · L&amp;T FINANCE, MAHAPE</span></div>
-          <div><strong>45,000</strong><span>SQ. FT. · LUMINOUS, HARIDWAR</span></div>
-          <div><strong>25,000</strong><span>SQ. FT. · L&amp;T FINANCE, BENGALURU</span></div>
-          <div><strong>01</strong><span>TEAM · ONE DELIVERY PROMISE</span></div>
-        </div>
-      </section>
-
-      <section class="section-pad projects-page-section" aria-labelledby="projects-title">
-        <div class="page-width">
-          <div class="section-heading work-heading reveal">
-            <div><p class="eyebrow"><span class="section-index">01</span> PROJECT PORTFOLIO</p><h2 class="section-title" id="projects-title">Work that carries<br><em>the team’s fingerprints.</em></h2></div>
-            <div class="work-intro"><p>Browse a few selected workplaces spanning NBFC, industrial and technology sectors. Photography is courtesy of FocusOn Interiors.</p><a class="underlined-link" href="https://focusoninteriors.com/projects/" target="_blank" rel="noopener noreferrer">View FocusOn’s full portfolio <span aria-hidden="true">↗</span></a></div>
-          </div>
-          <div class="project-filters reveal" role="group" aria-label="Filter projects">
-            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work <span>04</span></button>
-            <button class="filter-button" type="button" data-filter="workplace" aria-pressed="false">Workplace</button>
-            <button class="filter-button" type="button" data-filter="industrial" aria-pressed="false">Industrial</button>
-            <button class="filter-button" type="button" data-filter="technology" aria-pressed="false">Technology</button>
-          </div>
-          <div class="project-grid">
-            <article class="project-card project-card-featured reveal" data-category="workplace">
-              <a class="project-image" href="https://focusoninteriors.com/projects/lt-finance-navi-mumbai/" target="_blank" rel="noopener noreferrer" aria-label="View L and T Finance Mahape project on FocusOn Interiors"><span class="image-fallback" aria-hidden="true">L&amp;T</span><img src="https://roushan62.github.io/Azim-Khan/assets/img/lt-mahape-1.webp" alt="Open collaborative workplace at L&amp;T Finance, Mahape" loading="lazy"><span class="image-open" aria-hidden="true">↗</span><span class="project-image-label">01 / FINANCIAL SERVICES</span></a>
-              <div class="project-details"><div class="project-heading"><div><span class="project-category">WORKPLACE · NBFC</span><h3>L&amp;T Finance — Mahape</h3></div><span class="project-area">125,000 <small>SQ. FT.</small></span></div><p>FocusOn’s largest single delivery: a 1.25-lakh sq. ft. financial-services workplace with exposed services, collaborative hubs and a cafeteria opened onto a balcony for daylight and fresh air.</p><div class="project-meta"><span>NAVI MUMBAI, MAHARASHTRA</span><a href="https://focusoninteriors.com/projects/lt-finance-navi-mumbai/" target="_blank" rel="noopener noreferrer">CASE STUDY <b aria-hidden="true">↗</b></a></div></div>
-            </article>
-            <article class="project-card reveal" data-category="industrial">
-              <a class="project-image" href="https://focusoninteriors.com/projects/luminous-power-haridwar/" target="_blank" rel="noopener noreferrer" aria-label="View Luminous Power Technologies Haridwar project on FocusOn Interiors"><span class="image-fallback" aria-hidden="true">LP</span><img src="https://roushan62.github.io/Azim-Khan/assets/img/luminous-hub.webp" alt="Innovation Hub corridor at Luminous Power Technologies, Haridwar" loading="lazy"><span class="image-open" aria-hidden="true">↗</span><span class="project-image-label">02 / INDUSTRIAL</span></a>
-              <div class="project-details"><div class="project-heading"><div><span class="project-category">INDUSTRIAL · WORKPLACE</span><h3>Luminous — Haridwar</h3></div><span class="project-area">45,000 <small>SQ. FT.</small></span></div><p>An office within an industrial campus, including an Innovation Hub, brass screens, acoustic baffles and a living green wall.</p><div class="project-meta"><span>HARIDWAR, UTTARAKHAND</span><a href="https://focusoninteriors.com/projects/luminous-power-haridwar/" target="_blank" rel="noopener noreferrer">CASE STUDY <b aria-hidden="true">↗</b></a></div></div>
-            </article>
-            <article class="project-card reveal" data-category="technology">
-              <a class="project-image" href="https://focusoninteriors.com/projects/ericsson-ahmedabad/" target="_blank" rel="noopener noreferrer" aria-label="View Ericsson Ahmedabad project on FocusOn Interiors"><span class="image-fallback" aria-hidden="true">E</span><img src="https://roushan62.github.io/Azim-Khan/assets/img/ericsson-c-a.webp" alt="Contemporary boardroom at the Ericsson Ahmedabad office" loading="lazy"><span class="image-open" aria-hidden="true">↗</span><span class="project-image-label">03 / TECHNOLOGY</span></a>
-              <div class="project-details"><div class="project-heading"><div><span class="project-category">TECHNOLOGY</span><h3>Ericsson — Ahmedabad</h3></div><span class="project-area">3,500 <small>SQ. FT.</small></span></div><p>A compact tech office with an access-controlled arrival, a considered boardroom and a lively pantry beneath exposed services.</p><div class="project-meta"><span>AHMEDABAD, GUJARAT</span><a href="https://focusoninteriors.com/projects/ericsson-ahmedabad/" target="_blank" rel="noopener noreferrer">CASE STUDY <b aria-hidden="true">↗</b></a></div></div>
-            </article>
-            <article class="project-card reveal" data-category="workplace">
-              <a class="project-image" href="https://focusoninteriors.com/projects/lt-finance-bangalore/" target="_blank" rel="noopener noreferrer" aria-label="View L and T Finance Bengaluru project on FocusOn Interiors"><span class="image-fallback" aria-hidden="true">L&amp;T</span><img src="https://roushan62.github.io/Azim-Khan/assets/img/lt-blr-arch.webp" alt="Timber and planting details at the L&amp;T Finance Bengaluru office" loading="lazy"><span class="image-open" aria-hidden="true">↗</span><span class="project-image-label">04 / FINANCIAL SERVICES</span></a>
-              <div class="project-details"><div class="project-heading"><div><span class="project-category">WORKPLACE · NBFC</span><h3>L&amp;T Finance — Bengaluru</h3></div><span class="project-area">25,000 <small>SQ. FT.</small></span></div><p>A Bengaluru workplace pairing a timber-clad training room and planted screens with a recreation lounge for everyday connection.</p><div class="project-meta"><span>BENGALURU, KARNATAKA</span><a href="https://focusoninteriors.com/projects/lt-finance-bangalore/" target="_blank" rel="noopener noreferrer">CASE STUDY <b aria-hidden="true">↗</b></a></div></div>
-            </article>
-          </div>
-          <p class="work-credit">DELIVERED BY THE FOCUSON INTERIORS TEAM · PROJECT PHOTOGRAPHY COURTESY OF FOCUSON INTERIORS</p>
-        </div>
-      </section>
-
-      <section class="project-practice-section section-pad">
-        <div class="page-width project-practice-grid">
-          <div class="reveal"><p class="eyebrow"><span class="section-index">02</span> THE DELIVERY APPROACH</p><h2 class="section-title">One roof.<br><em>One accountable team.</em></h2><p class="project-practice-copy">The value in a workplace project is not just the visual. It is the coordination behind it—from defining the brief and design to procurement, on-site execution and handover.</p></div>
-          <div class="practice-list reveal"><div><span>01</span><strong>Listen and define</strong><small>Understand the people, place and purpose.</small></div><div><span>02</span><strong>Design with delivery in mind</strong><small>Keep intent connected to the site realities.</small></div><div><span>03</span><strong>Coordinate and execute</strong><small>One workflow from procurement through handover.</small></div><div><span>04</span><strong>Measure what matters</strong><small>Consistency, quality, value and time efficiency.</small></div></div>
-        </div>
-      </section>
-
-      <section class="page-cta-section">
-        <div class="page-width page-cta reveal"><div><span>EXPLORE THE WORK OF FOCUSON INTERIORS</span><h2>More spaces. <em>More stories.</em></h2></div><a class="button button-primary" href="https://focusoninteriors.com/projects/" target="_blank" rel="noopener noreferrer">Company portfolio <span aria-hidden="true">↗</span></a></div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="page-width footer-main">
-        <a class="brand footer-brand" href="index.html#home" aria-label="Azim Khan, home"><span class="brand-monogram">A<span>K</span></span><span class="brand-copy"><strong>AZIM KHAN</strong><small>CEO · FOCUSON INTERIORS</small></span></a>
-        <p>From the first detail<br>to the bigger picture.</p>
-        <div class="footer-links"><a href="about.html">About</a><a href="journey.html">Journey</a><a href="projects.html" aria-current="page">Selected work</a><a href="contact.html">Contact</a><a href="https://in.linkedin.com/in/azim-khan-1424561a9" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+      <div class="header-actions">
+        <a class="btn btn--primary btn--sm header-cta" href="contact.html">Let’s talk <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
       </div>
-      <div class="page-width footer-bottom"><span>© <span id="current-year">2026</span> AZIM KHAN. ALL RIGHTS RESERVED.</span><span>BUILT ON THE GROUND. LED WITH PURPOSE.</span><a href="#top">BACK TO TOP ↑</a></div>
-    </footer>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
+    <nav aria-label="Mobile navigation">
+        <a href="index.html" style="--i:0">Home<small>01</small></a>
+        <a href="about.html" style="--i:1">About<small>02</small></a>
+        <a href="experience.html" style="--i:2">Experience<small>03</small></a>
+        <a href="projects.html" style="--i:3" aria-current="page">Projects<small>04</small></a>
+        <a href="expertise.html" style="--i:4">Expertise<small>05</small></a>
+        <a href="highlights.html" style="--i:5">Highlights<small>06</small></a>
+        <a href="contact.html" style="--i:6">Contact<small>07</small></a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <a href="mailto:azim.khan@focusoninterior.in">azim.khan@focusoninterior.in</a>
+      <a href="https://in.linkedin.com/in/azim-khan-1424561a9" target="_blank" rel="noopener noreferrer">LinkedIn — Azim Khan ↗</a>
+    </div>
   </div>
+
+  <main id="main" tabindex="-1">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav class="crumbs hero-fade" aria-label="Breadcrumb"><a href="index.html">Home</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg><span aria-current="page">Projects</span></nav>
+        <p class="eyebrow hero-fade" style="--d:.05s">Projects portfolio</p>
+        <h1 class="h1" id="page-title"><span class="reveal-line"><span style="--d:.1s">Design intent,</span></span><span class="reveal-line"><span class="accent" style="--d:.2s">delivered.</span></span></h1>
+        <p class="lead hero-fade" style="--d:.4s">Selected programmes delivered by the FocusOn Interiors team across India — workplaces, industrial facilities, technology offices and education spaces. Photography © FocusOn Interiors.</p>
+        <div class="note hero-fade" style="--d:.5s"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6Z"/><path d="m8.8 12 2.2 2.2 4.3-4.4"/></svg></span><p><strong>About attribution.</strong> These are FocusOn Interiors team projects, delivered during Azim Khan’s tenure in operations leadership and as CEO. Realty+ specifically names Infosys, L&amp;T Finance and Luminous among the organisations he has worked with. All photographs show the actual delivered spaces.</p></div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="works-title" style="padding-top:0">
+      <div class="container">
+        <h2 class="sr-only" id="works-title">Project list</h2>
+        <div class="filters" role="group" aria-label="Filter projects by sector" data-reveal>
+          <button class="filter-btn" type="button" data-key="all" aria-pressed="true">All</button><button class="filter-btn" type="button" data-key="bfsi" aria-pressed="false">BFSI &amp; Workplace</button><button class="filter-btn" type="button" data-key="industrial" aria-pressed="false">Industrial</button><button class="filter-btn" type="button" data-key="technology" aria-pressed="false">Technology</button><button class="filter-btn" type="button" data-key="education" aria-pressed="false">Education</button><button class="filter-btn" type="button" data-key="care" aria-pressed="false">Healthcare &amp; F&amp;B</button>
+          <span class="filter-count" id="filter-count" aria-live="polite"></span>
+        </div>
+        <div class="works">
+          <article class="project-card project-card--big" data-filter="bfsi">
+            <div class="project-media">
+              <img src="assets/images/lt-mahape-1.webp" width="984" height="658" alt="Open-plan workstations beneath exposed blue ducting at L&amp;T Finance, Mahape" fetchpriority="high">
+              <span class="project-tag">BFSI</span>
+              <span class="project-area">125,000 sq ft</span>
+            </div>
+            <div class="project-body">
+              <h3>L&amp;T Finance — Mahape</h3>
+              <div class="project-meta">
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M15 9h3a2 2 0 0 1 2 2v10"/><path d="M3 21h18"/><path d="M8 7h3M8 11h3M8 15h3"/></svg>L&amp;T Finance Limited</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Mahape, Navi Mumbai, Maharashtra</span>
+              </div>
+              <p>A 1.25-lakh sq ft financial-services workplace with open workstations under exposed blue services, ring-light breakout lounges, collaborative hubs, a timber café hub and acoustic cabins.</p>
+              <a class="link-arrow project-link" href="project-lt-finance-mahape.html" aria-label="View project details: L&amp;T Finance, Mahape">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+            </div>
+          </article>
+          <article class="project-card" data-filter="industrial">
+            <div class="project-media">
+              <img src="assets/images/luminous-hub.webp" width="984" height="658" alt="Innovation Hub corridor with black marble floor at Luminous, Haridwar" loading="lazy" decoding="async">
+              <span class="project-tag">Industrial</span>
+              <span class="project-area">45,000 sq ft</span>
+            </div>
+            <div class="project-body">
+              <h3>Luminous — Haridwar</h3>
+              <div class="project-meta">
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M15 9h3a2 2 0 0 1 2 2v10"/><path d="M3 21h18"/><path d="M8 7h3M8 11h3M8 15h3"/></svg>Luminous Power Technologies Pvt. Ltd.</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Haridwar, Uttarakhand</span>
+              </div>
+              <p>A 45,000 sq ft design-build office within an industrial campus — an Innovation Hub with a black-marble corridor and screened walls, glass-partitioned floors and open-plan workstations.</p>
+              <a class="link-arrow project-link" href="project-luminous-haridwar.html" aria-label="View project details: Luminous Power Technologies, Haridwar">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+            </div>
+          </article>
+          <article class="project-card" data-filter="education">
+            <div class="project-media">
+              <img src="assets/images/emversity-arch.webp" width="1400" height="801" alt="Reception with Emversity signage in Kochi" loading="lazy" decoding="async">
+              <span class="project-tag">Education</span>
+              <span class="project-area">55,000 sq ft</span>
+            </div>
+            <div class="project-body">
+              <h3>Emversity — Kochi</h3>
+              <div class="project-meta">
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M15 9h3a2 2 0 0 1 2 2v10"/><path d="M3 21h18"/><path d="M8 7h3M8 11h3M8 15h3"/></svg>Emversity (Beyond Odds Technology Pvt. Ltd.)</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Kochi, Kerala</span>
+              </div>
+              <p>A skilling campus fit-out for Emversity: a branded reception, flexible classrooms with tablet-arm seating and open workstations with green glass screens.</p>
+              <a class="link-arrow project-link" href="project-emversity-kochi.html" aria-label="View project details: Emversity, Kochi">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+            </div>
+          </article>
+          <article class="project-card" data-filter="technology">
+            <div class="project-media">
+              <img src="assets/images/ericsson-c-a.webp" width="1200" height="954" alt="Boardroom with navy slatted ceiling at Ericsson, Ahmedabad" loading="lazy" decoding="async">
+              <span class="project-tag">Technology</span>
+              <span class="project-area">3,500 sq ft</span>
+            </div>
+            <div class="project-body">
+              <h3>Ericsson — Ahmedabad</h3>
+              <div class="project-meta">
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M15 9h3a2 2 0 0 1 2 2v10"/><path d="M3 21h18"/><path d="M8 7h3M8 11h3M8 15h3"/></svg>Ericsson</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Ahmedabad, Gujarat</span>
+              </div>
+              <p>A compact technology office with access-controlled entry, a boardroom under a navy slatted ceiling and a pantry lit by red and yellow pendants.</p>
+              <a class="link-arrow project-link" href="project-ericsson-ahmedabad.html" aria-label="View project details: Ericsson, Ahmedabad">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+            </div>
+          </article>
+          <article class="project-card" data-filter="bfsi">
+            <div class="project-media">
+              <img src="assets/images/lt-blr-arch.webp" width="380" height="204" alt="Training room with timber cladding and planted screens" loading="lazy" decoding="async">
+              <span class="project-tag">BFSI</span>
+              <span class="project-area">25,000 sq ft</span>
+            </div>
+            <div class="project-body">
+              <h3>L&amp;T Finance — Bengaluru</h3>
+              <div class="project-meta">
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M15 9h3a2 2 0 0 1 2 2v10"/><path d="M3 21h18"/><path d="M8 7h3M8 11h3M8 15h3"/></svg>L&amp;T Finance Limited</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bengaluru, Karnataka</span>
+              </div>
+              <p>A second workplace for L&amp;T Finance: a timber-clad training room, arched booths against emerald walls and a recreation lounge.</p>
+              <a class="link-arrow project-link" href="project-lt-finance-bengaluru.html" aria-label="View project details: L&amp;T Finance, Bengaluru">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt section--line" aria-labelledby="more-title">
+      <div class="container">
+        <div class="section-head">
+          <div data-reveal>
+            <p class="eyebrow">More programmes</p>
+            <h2 class="h2" id="more-title">Across sectors and <span class="accent">cities.</span></h2>
+            <p class="lead">Further programmes listed by FocusOn Interiors. Photography for these projects is not included on this site. The sector filters above apply here too.</p>
+          </div>
+        </div>
+        <div class="more-grid">
+          <article class="more-card" data-filter="bfsi">
+            <div class="top"><span class="mono" aria-hidden="true">C</span><span class="area">8,000 sq ft</span></div>
+            <h3>Centricity</h3>
+            <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Gurugram, Haryana</span></div>
+            <span class="chip" style="align-self:flex-start">Wealth-tech workplace</span>
+            <p class="source">Listed in: FocusOn About page</p>
+          </article>
+          <article class="more-card" data-filter="bfsi">
+            <div class="top"><span class="mono" aria-hidden="true">C</span><span class="area">3,500 sq ft</span></div>
+            <h3>Centricity</h3>
+            <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Mumbai, Maharashtra</span></div>
+            <span class="chip" style="align-self:flex-start">Wealth-tech workplace</span>
+            <p class="source">Listed in: FocusOn About page</p>
+          </article>
+          <article class="more-card" data-filter="technology">
+            <div class="top"><span class="mono" aria-hidden="true">N</span><span class="area">3,500 sq ft</span></div>
+            <h3>Navu</h3>
+            <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bengaluru, Karnataka</span></div>
+            <span class="chip" style="align-self:flex-start">Workplace</span>
+            <p class="source">Listed in: FocusOn About page</p>
+          </article>
+          <article class="more-card" data-filter="bfsi">
+            <div class="top"><span class="mono" aria-hidden="true">M</span><span class="area">50,000 sq ft</span></div>
+            <h3>Max Life Insurance</h3>
+            <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>PAN India</span></div>
+            <span class="chip" style="align-self:flex-start">BFSI · Multi-site</span>
+            <p class="source">Listed in: Azim Khan V-Card</p>
+          </article>
+          <article class="more-card" data-filter="care">
+            <div class="top"><span class="mono" aria-hidden="true">C</span><span class="area">87,000 sq ft</span></div>
+            <h3>Compass Group</h3>
+            <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Mumbai · Pune · Chennai</span></div>
+            <span class="chip" style="align-self:flex-start">F&B · Rollout</span>
+            <p class="source">Listed in: Azim Khan V-Card</p>
+          </article>
+          <article class="more-card" data-filter="care">
+            <div class="top"><span class="mono" aria-hidden="true">K</span><span class="area">35,000 sq ft</span></div>
+            <h3>Krsnaa Diagnostics</h3>
+            <div class="project-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Maharashtra · West Bengal + PAN India</span></div>
+            <span class="chip" style="align-self:flex-start">Healthcare · Chain</span>
+            <p class="source">Listed in: Azim Khan V-Card</p>
+          </article>
+        </div>
+        <p class="empty" id="filter-empty">No projects in this sector yet. Try another filter.</p>
+        <p class="source" style="margin-top:32px" data-reveal>Sources: <a href="https://focusoninteriorsai.github.io/Azim.khan-VCard/" target="_blank" rel="noopener noreferrer">Azim Khan digital business card</a> (Selected Work), <a href="https://roushan62.github.io/FocusOn/about/" target="_blank" rel="noopener noreferrer">FocusOn Interiors About page</a> (portfolio) and <a href="https://www.rprealtyplus.com/article/focuson-interiors-names-azim-khan-ceo-to-drive-national-expansion-123855.html" target="_blank" rel="noopener noreferrer">Realty+</a>.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card" data-reveal>
+          <p class="eyebrow">Let’s talk</p>
+          <h2 class="h2" id="cta-title">Have a space in mind? <span class="dim">Let’s talk delivery.</span></h2>
+          <p class="lead">For project consultations, partnerships and growth conversations with Azim Khan and the FocusOn Interiors leadership team.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="mailto:azim.khan@focusoninterior.in?subject=Enquiry%20for%20Azim%20Khan">Email Azim <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+            <a class="btn btn--ghost" href="https://in.linkedin.com/in/azim-khan-1424561a9" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Azim Khan — home">
+            <span class="brand-mark" aria-hidden="true">A<span>K</span></span>
+            <span class="brand-text"><strong>Azim Khan</strong><small>CEO · FocusOn Interiors</small></span>
+          </a>
+          <p>Chief Executive Officer of FocusOn Interiors — a PAN-India design-and-build firm for workplaces and industrial environments. Based in New Delhi.</p>
+          <div class="footer-social">
+            <a href="https://in.linkedin.com/in/azim-khan-1424561a9" target="_blank" rel="noopener noreferrer" aria-label="Azim Khan on LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16"/><path d="M8 7.6v.1"/><path d="M12 16v-3.2a2.3 2.3 0 0 1 4.6 0V16"/><path d="M12 10.5V16"/></svg></a>
+            <a href="mailto:azim.khan@focusoninterior.in" aria-label="Email Azim Khan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+            <a href="https://focusoninteriors.com/" target="_blank" rel="noopener noreferrer" aria-label="FocusOn Interiors website (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg></a>
+          </div>
+        </div>
+        <nav class="footer-col" aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="expertise.html">Expertise</a></li>
+            <li><a href="highlights.html">Highlights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <h2>Connect</h2>
+          <ul>
+            <li><a href="mailto:azim.khan@focusoninterior.in">azim.khan@focusoninterior.in</a><span class="small">Direct email</span></li>
+            <li><a href="https://in.linkedin.com/in/azim-khan-1424561a9" target="_blank" rel="noopener noreferrer">linkedin.com/in/azim-khan-1424561a9 ↗</a><span class="small">LinkedIn</span></li>
+            <li><a href="https://focusoninteriors.com/" target="_blank" rel="noopener noreferrer">focusoninteriors.com ↗</a><span class="small">FocusOn Interiors</span></li>
+            <li><a href="tel:+919910258820">+91 99 1025 8820</a><span class="small">FocusOn company line</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Azim Khan. All rights reserved. Project photography © FocusOn Interiors.</p>
+        <a class="to-top" href="#top">Back to top <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span></span></div>
+
+  <script>
+
+/* Shared behaviour: header state, mobile menu, scroll reveals, image fallbacks, year. */
+(function () {
+  'use strict';
+  var doc = document.documentElement;
+  var reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+  /* Header scroll state */
+  var header = document.querySelector('.site-header');
+  var ticking = false;
+  function updateHeader() {
+    ticking = false;
+    if (header) header.classList.toggle('is-scrolled', (window.scrollY || window.pageYOffset) > 12);
+  }
+  updateHeader();
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(updateHeader); }
+  }, { passive: true });
+
+  /* Mobile navigation */
+  var toggle = document.querySelector('.menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  function isOpen() { return toggle && toggle.getAttribute('aria-expanded') === 'true'; }
+  function setMenu(open, restoreFocus) {
+    if (!toggle || !menu) return;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    menu.classList.toggle('is-open', open);
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    if (open) { menu.removeAttribute('inert'); } else { menu.setAttribute('inert', ''); }
+    document.body.classList.toggle('menu-open', open);
+    if (open) {
+      var first = menu.querySelector('a');
+      if (first) window.setTimeout(function () { first.focus({ preventScroll: true }); }, 60);
+    } else if (restoreFocus) {
+      toggle.focus();
+    }
+  }
+  if (toggle && menu) {
+    toggle.addEventListener('click', function () { setMenu(!isOpen()); });
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('a')) setMenu(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!isOpen()) return;
+      if (e.key === 'Escape') { setMenu(false, true); return; }
+      if (e.key === 'Tab') {
+        var focusables = [toggle].concat(Array.prototype.slice.call(menu.querySelectorAll('a')));
+        var idx = focusables.indexOf(document.activeElement);
+        if (e.shiftKey && (idx <= 0)) { e.preventDefault(); focusables[focusables.length - 1].focus(); }
+        else if (!e.shiftKey && idx === focusables.length - 1) { e.preventDefault(); focusables[0].focus(); }
+      }
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1120 && isOpen()) setMenu(false);
+    });
+  }
+
+  /* Staggered children */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-stagger]'), function (group) {
+    var step = parseFloat(group.getAttribute('data-stagger')) || 0.08;
+    Array.prototype.forEach.call(group.children, function (child, i) {
+      if (!child.hasAttribute('data-reveal')) child.setAttribute('data-reveal', '');
+      child.style.setProperty('--d', (i * step).toFixed(2) + 's');
+    });
+  });
+
+  /* Scroll reveals (IntersectionObserver) */
+  var revealItems = document.querySelectorAll('[data-reveal]');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    Array.prototype.forEach.call(revealItems, function (el) { el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    Array.prototype.forEach.call(revealItems, function (el) { io.observe(el); });
+  }
+
+  /* Image fallbacks: never leave a broken-image icon */
+  function markMissing(img) {
+    var holder = img.closest('.frame, .project-media, .media-fallback') || img.parentElement;
+    if (holder) {
+      holder.classList.add('img-missing');
+      if (!holder.getAttribute('data-fallback')) holder.setAttribute('data-fallback', img.getAttribute('alt') || 'Image unavailable');
+    }
+  }
+  Array.prototype.forEach.call(document.images, function (img) {
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) markMissing(img);
+    else img.addEventListener('error', function () { markMissing(img); }, { once: true });
+  });
+
+  /* Footer year */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-year]'), function (el) {
+    el.textContent = String(new Date().getFullYear());
+  });
+
+  /* Back to top */
+  Array.prototype.forEach.call(document.querySelectorAll('.to-top'), function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      var skip = document.querySelector('.brand');
+      if (skip) skip.focus({ preventScroll: true });
+    });
+  });
+
+  /* Inner-page hero reveal (the homepage waits for its intro instead) */
+  if (!document.getElementById('intro')) {
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () { doc.classList.add('is-ready'); });
+    });
+  }
+})();
+
+  </script>
+  <script>
+
+/* Projects: sector filters */
+(function () {
+  'use strict';
+  var buttons = document.querySelectorAll('.filter-btn');
+  var items = document.querySelectorAll('[data-filter]');
+  var count = document.getElementById('filter-count');
+  var empty = document.getElementById('filter-empty');
+  if (!buttons.length) return;
+  function apply(key) {
+    var shown = 0;
+    Array.prototype.forEach.call(items, function (el) {
+      var match = key === 'all' || el.getAttribute('data-filter') === key;
+      el.classList.toggle('is-hidden', !match);
+      el.classList.remove('is-entering');
+      if (match) {
+        shown++;
+        void el.offsetWidth; /* restart entrance animation */
+        el.classList.add('is-entering');
+        el.classList.add('is-in');
+      }
+    });
+    if (count) count.textContent = shown + (shown === 1 ? ' project' : ' projects');
+    if (empty) empty.classList.toggle('is-show', shown === 0);
+  }
+  Array.prototype.forEach.call(buttons, function (btn) {
+    btn.addEventListener('click', function () {
+      Array.prototype.forEach.call(buttons, function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      apply(btn.getAttribute('data-key'));
+    });
+  });
+  apply('all');
+})();
+
+  </script>
 </body>
 </html>
